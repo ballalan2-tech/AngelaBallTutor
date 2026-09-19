@@ -298,63 +298,61 @@
     </div>
 </section>
 
- <section id="contact" class="contact" style="padding: 50px 20px; max-width: 600px; margin: 0 auto;">
-        <h2 class="section-title" style="text-align: center; margin-bottom: 30px;">Book a Free Consultation Call</h2>
+<section id="contact" class="contact" style="padding: 50px 20px; max-width: 600px; margin: 0 auto;">
+    <h2 class="section-title" style="text-align: center; margin-bottom: 30px;">Book a Free Consultation Call</h2>
 
-        <form action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-    
-    <!-- REQUIRED: Your unique Web3Forms Access Key goes here -->
-    <input type="hidden" name="access_key" value="cbcdf589-5ca6-4070-83ec-efb556f4c87a">
-    
-    <!-- Optional: Customises the email subject line when it lands in your inbox -->
-    <input type="hidden" name="subject" value="New Science Tutoring Enquiry - Darlington Website">
-    
-    <!-- FIX: Redirects users to the official success page instead of breaking -->
-    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+    <form action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
 
-    <!-- Form Fields -->
-    <div>
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Parent/Guardian Name:</label>
-        <input type="text" name="parent_name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-    </div>
+        <!-- REQUIRED: Your unique Web3Forms Access Key goes here -->
+        <input type="hidden" name="access_key" value="cbcdf589-5ca6-4070-83ec-efb556f4c87a">
 
-    <div>
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email Address:</label>
-        <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-    </div>
+        <!-- Optional: Customises the email subject line when it lands in your inbox -->
+        <input type="hidden" name="subject" value="New Science Tutoring Enquiry - Darlington Website">
 
-    <div>
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Phone Number:</label>
-        <input type="tel" name="phone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-    </div>
+        <!-- FIX: Redirects users to the official success page instead of breaking -->
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
-    <div>
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Student's Current Year Group & Subject(s):</label>
-        <select name="level_subject" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background: white;">
-            <option value="" disabled selected>Select an option...</option>
-            <option value="GCSE Combined Science">GCSE Combined Science</option>
-            <option value="GCSE Triple Science">GCSE Triple/Separate Sciences</option>
-            <option value="A-Level Biology">A-Level Biology</option>
-            <option value="A-Level Chemistry">A-Level Chemistry</option>
-            <option value="Other / Multiple levels">Multiple Levels / Other</option>
-        </select>
-    </div>
+        <!-- Form Fields -->
+        <div>
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Parent/Guardian Name:</label>
+            <input type="text" name="parent_name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
 
-    <!-- Ensure your closing </form> tag is at the bottom -->
-    <button type="submit" style="padding: 12px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Submit Enquiry Request</button>
-     </form>
-      
-            <div>
-                <label style="display: block; margin-bottom: 5px; font-weight: bold;">How can I help your child? (Exam boards, current grades, or specific worries):</label>
-                <textarea name="message" rows="4" placeholder="e.g. Preparing for AQA GCSE, struggling with chemistry calculations..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-family: sans-serif;"></textarea>
-            </div>
+        <div>
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email Address:</label>
+            <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
 
-            <button type="submit" style="background-color: #4ade80; color: white; border: none; padding: 12px 20px; font-size: 18px; font-weight: bold; border-radius: 5px; cursor: pointer; margin-top: 10px; transition: background 0.2s;">
-                Submit Enquiry Request
-            </button>
-            
-        </form>
-    </section>
+        <div>
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Phone Number:</label>
+            <input type="tel" name="phone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Student's Current Year Group & Subject(s):</label>
+            <select name="level_subject" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background: white;">
+                <option value="" disabled selected>Select an option...</option>
+                <option value="GCSE Combined Science">GCSE Combined Science</option>
+                <option value="GCSE Triple Science">GCSE Triple/Separate Sciences</option>
+                <option value="A-Level Biology">A-Level Biology</option>
+                <option value="A-Level Chemistry">A-Level Chemistry</option>
+                <option value="Other / Multiple levels">Multiple Levels / Other</option>
+            </select>
+        </div>
+
+        <!-- FIX: This textarea is now properly INSIDE the form block -->
+        <div>
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">How can I help your child? (Exam boards, current grades, or specific worries):</label>
+            <textarea name="message" rows="4" placeholder="e.g. Preparing for AQA GCSE, struggling with chemistry calculations..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-family: sans-serif;"></textarea>
+        </div>
+
+        <!-- FIX: Only one green submit button remains, placed right before closing the form -->
+        <button type="submit" style="background-color: #4ade80; color: white; border: none; padding: 12px 20px; font-size: 18px; font-weight: bold; border-radius: 5px; cursor: pointer; margin-top: 10px; transition: background 0.2s;">
+            Submit Enquiry Request
+        </button>
+        
+    </form>
+</section>
 
     <footer>
         <p>&copy; 2026 Elite Science Tutoring. All rights reserved. Located in Darlington, UK & Online Globally.</p>
