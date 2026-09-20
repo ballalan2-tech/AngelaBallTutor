@@ -301,16 +301,13 @@
 <section id="contact" class="contact" style="padding: 50px 20px; max-width: 600px; margin: 0 auto;">
     <h2 class="section-title" style="text-align: center; margin-bottom: 30px;">Book a Free Consultation Call</h2>
 
-    <form action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+    <form action="https://api.web3forms.com/submit" method="POST" id="form" style="display: flex; flex-direction: column; gap: 15px;">
 
         <!-- REQUIRED: Your unique Web3Forms Access Key goes here -->
         <input type="hidden" name="access_key" value="cbcdf589-5ca6-4070-83ec-efb556f4c87a">
 
         <!-- Optional: Customises the email subject line when it lands in your inbox -->
         <input type="hidden" name="subject" value="New Science Tutoring Enquiry - Darlington Website">
-
-        <!-- FIX: Redirects users to the official success page instead of breaking -->
-        <input type="hidden" name="redirect" value="https://ballalan2-tech.github.io/AngelaBallTutor/thank-you">
 
         <!-- Form Fields -->
         <div>
@@ -356,6 +353,35 @@
     <footer>
         <p>&copy; 2026 Elite Science Tutoring. All rights reserved. Located in Darlington, UK & Online Globally.</p>
     </footer>
+<script>
+const form = document.getElementById('form');
 
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            if (response.status == 200) {
+                // This forces the browser to open your thank-you page instantly on success
+                window.location.href = "https://github.io";
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        })
+        .catch(error => {
+            alert("Connection error. Please try again.");
+        });
+});
+</script>
 </body>
 </html>
